@@ -47,7 +47,6 @@ melhor_cor.head ()
 
 pedidos_por_clientes = base['order_id'].value_counts()
 pedido_unico = pedidos_por_clientes [pedidos_por_clientes == 1]
-#total_unico = len(pedido_unico)
 pedido_unico.head()
 
 base.describe()
