@@ -3,7 +3,7 @@
 
 import streamlit as st 
 import pandas as pd
-import matplotlib 
+import matplotlib.pyplot as plt
 import seaborn 
 
 #carregando o arquivo 
@@ -50,4 +50,14 @@ pedido_unico = pedidos_por_clientes [pedidos_por_clientes == 1]
 pedido_unico.head()
 
 base.describe()
+
+# Visualizar os dados 
+
+plt.figure(figsize=(10, 6))
+produtos_mais_vendidos.plot(kind='bar', color='skyblue')
+plt.xlabel('sku')
+plt.ylabel('quantity')
+plt.title('produtos_mais_vendidos em quantidade')
+#plt.xticks(rotation=45)
+plt.show()
 
